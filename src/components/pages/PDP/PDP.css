@@ -1,0 +1,16 @@
+.product-details-page {
+  display: flex;
+}
+
+.imgSize {
+  height: 338px;
+  width: 356px;
+  left: 0px;
+  top: -5px;
+  border-radius: 0px;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+}

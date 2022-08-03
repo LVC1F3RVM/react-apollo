@@ -1,0 +1,26 @@
+.app-header {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 1vmin);
+}
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header-link {
+  text-decoration: none;
+  padding-left: 0.5rem;
+}
+.cart-currency-bar {
+  display: flex;
+  flex-direction: row;
+}
+.currency-change {
+  display: flex;
+  flex-direction: row;
+  padding-right: 0.5rem;
+}

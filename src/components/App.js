@@ -1,34 +1,32 @@
-import React from 'react';
-import CreateLink from './CreateLink';
-import Header from './Header';
-import LinkList from './LinkList';
-import {Navigate, Route, Routes} from 'react-router-dom';
-import Login from './Login';
-import Search from './Search';
+import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
-const App = () => (
-  <div className="center w85">
-    <Header />
-    <div className="ph3 pv1 background-gray">
-      <Routes>
-        <Route
-          path="/"
-          element={<Navigate replace to="/new/1" />}
-        />
-        <Route
-          path="/create"
-          element={<CreateLink/>}
-        />
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/search"element={<Search/>}/>
-        <Route path="/top" element={<LinkList/>} />
-        <Route
-          path="/new/:page"
-          element={<LinkList/>}
-        />
-      </Routes>
+import { Header } from "./Header/Header";
+import AllPage from "./pages/AllPage/AllPage";
+import TechPage from "./pages/Tech/Tech";
+import ClothesPage from "./pages/Clothes/ClothesPage";
+import ProductDetailsPage from "./pages/PDP/ProductDetailsPage";
+import Cart from "./pages/ProductCart/ProductCart";
+
+import "../styles/App.css";
+
+const App = () => {
+  return (
+    <div className="App">
+      <div className="">
+        <Header />
+      </div>
+      <div>
+        <Routes>
+          <Route strict exact path="/" element={<AllPage />} />
+          <Route strict exact path="/tech" element={<TechPage />} />
+          <Route strict exact path="/clothes" element={<ClothesPage />} />
+          <Route strict exact path="/:id" element={<ProductDetailsPage />} />
+          <Route strict exact path="/cart" element={<Cart />} />
+        </Routes>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default App;
